@@ -1,0 +1,20 @@
+{
+    "envId": "my-blog-react-8gmsxw51152f0a6b",
+    "version": "2.0",
+    "$schema": "https://framework-1258016615.tcloudbaseapp.com/schema/latest.json",
+    "functionRoot": "./functions",
+    "functions": [],
+    "region": "ap-shanghai",
+    "framework": {
+        "name": "webify-admin",
+        "plugins": {
+            "react": {
+                "use": "@cloudbase/framework-plugin-website",
+                "inputs": {
+                    "buildCommand": "npm run build",
+                    "outputPath": "build"
+                }
+            }
+        }
+    }
+}
