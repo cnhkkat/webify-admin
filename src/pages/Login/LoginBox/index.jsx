@@ -28,6 +28,7 @@ const LoginBox = (props) => {
   const onLogin = (isVisitor) => {
     const EMAIL = isVisitor ? visitorEmail : email
     const PWD = isVisitor ? visitorPwd : pwd
+
     auth
       .signInWithEmailAndPassword(EMAIL, PWD)
       .then(() => {

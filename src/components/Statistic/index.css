@@ -1,0 +1,26 @@
+.statisticItem {
+    display: flex;
+    justify-content: space-around;
+    flex: 0 1 160px;
+    background: #fff;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+.statisticItem:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.type {
+    font-size: 20px;
+    color: #000;
+    text-align: center;
+}
+.number {
+    font-size: 80px;
+    color: #1890ff;
+}
+
+.numberBox:hover .number {
+    color: red;
+}

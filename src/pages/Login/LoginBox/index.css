@@ -6,7 +6,9 @@
   height: 300px;
   background-color: rgb(5, 56, 71);
   box-shadow: 0 0 18px rgba(0, 0, 0, 0.5);
-  margin: 0 auto;
+  top: 200px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 /* 头像 */

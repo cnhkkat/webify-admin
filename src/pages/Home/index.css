@@ -1,0 +1,8 @@
+.contain {
+  margin-left: 100px;
+}
+.flexBox {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}

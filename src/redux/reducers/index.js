@@ -2,8 +2,20 @@ import { combineReducers } from 'redux'
 
 import loginState from './loginState'
 import articles from './articles'
+import drafts from './drafts'
+import msgs from './msgs'
+import says from './says'
+import links from './links'
+import classes from './classes'
+import tags from './tags'
 
 export default combineReducers({
   loginState,
-  articles
+  articles,
+  drafts,
+  msgs,
+  says,
+  links,
+  classes,
+  tags
 })

@@ -1,0 +1,80 @@
+/* ————————————————————————————上方搜索框框———————————————————————————— */
+.searchBox {
+    height: 50px;
+    background-color: #b9dfff;
+    margin-left: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.addArticleBtn {
+    height: 40px;
+    width: 86px;
+    background-color: #1890ff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    user-select: none;
+    transition: all 0.2s;
+    color: #fff;
+}
+
+.Search {
+    background-color: #fff;
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    padding: 0 10px;
+    transition: all 0.3s;
+    border: none;
+    border-radius: 10px;
+}
+.Search:hover {
+    box-shadow: 0 0 8px #1890ff;
+}
+.resetBtn {
+    width: 50px;
+    height: 40px;
+    background-color: #1890ff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    color: #fff;
+    transition: all 0.3s;
+    user-select: none;
+}
+.resetBtn:hover,
+.addArticleBtn:hover {
+    background-color: #40a9ff;
+    box-shadow: 0 0 4px #1890ff;
+}
+
+.searchClass {
+    /* position: absolute;
+    top: 50%;
+    left: 601px;
+    transform: translate(0, -50%); */
+}
+
+.searchTag {
+    /* position: absolute;
+    top: 50%;
+    left: 966px;
+    transform: translate(0, -50%); */
+}
+
+/* ————————————————————————————表格区———————————————————————————————— */
+.ant-table-thead .ant-table-cell {
+    text-align: center;
+    font-size: 16px;
+}
+
+.ant-table-tbody .ant-table-cell {
+    text-align: center;
+}
+.Table {
+    margin-left: 100px;
+}

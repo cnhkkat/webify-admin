@@ -1,0 +1,15 @@
+.ChartBox {
+  height: 300px;
+  width: 400px;
+  background-color: #fff;
+  transition: all 0.2s;
+  padding: 10px 0 0 10px;
+}
+.chartTitle {
+  font-size: 20px;
+  text-align: center;
+  color: #000;
+}
+.ChartBox:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}

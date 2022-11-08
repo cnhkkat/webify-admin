@@ -1,0 +1,38 @@
+.WelcomeBox {
+    height: 140px;
+    transition: all 0.2s;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.WelcomeBox:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.home-avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin: 20px;
+}
+
+.welcomeTitle {
+    flex: 1;
+    font-size: 36px;
+
+}
+
+.poemContent {
+    position: absolute;
+    left: 150px;
+    bottom: 24px;
+    font-size: 18px;
+}
+
+.poemTitle {
+    font-size: 16px;
+}
+

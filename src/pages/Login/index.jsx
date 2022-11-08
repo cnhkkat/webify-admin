@@ -3,10 +3,10 @@ import LoginBg from './LoginBg'
 
 const Login = () => {
   return (
-    <div>
+    <>
       <LoginBg />
       <LoginBox />
-    </div>
+    </>
   )
 }
 

@@ -1,46 +1,46 @@
-import MyNavLink from '../MyNavLink'
+import { NavLink } from 'react-router-dom'
 import './index.css'
 
 const Nav = () => {
   const router = [
     {
-      to: '/admin/home',
+      to: '/',
       content: '首页'
     },
     {
-      to: '/admin/article',
+      to: '/articles',
       content: '文章'
     },
     // {
-    //     to: '/admin/gallery',
+    //     to: '/gallery',
     //     content: '图库',
     // },
     {
-      to: '/admin/say',
+      to: '/says',
       content: '说说'
     },
     {
-      to: '/admin/msg',
+      to: '/msgs',
       content: '留言板'
     },
     {
-      to: '/admin/link',
+      to: '/links',
       content: '友链'
     },
     {
-      to: '/admin/show',
+      to: '/shows',
       content: '项目'
     },
     {
-      to: '/admin/about',
+      to: '/about',
       content: '关于'
     },
     {
-      to: '/admin/log',
+      to: '/logs',
       content: '日志'
     },
     {
-      to: '/admin/draft',
+      to: '/drafts',
       content: '草稿箱'
     }
   ]
@@ -50,9 +50,9 @@ const Nav = () => {
       <ul className='funcBtns'>
         {router.map((item, index) => (
           <li key={index}>
-            <MyNavLink to={item.to} className='funcLi'>
+            <NavLink to={item.to} className={({ isActive }) => (isActive ? 'navActive funcLi' : 'funcLi')}>
               {item.content}
-            </MyNavLink>
+            </NavLink>
           </li>
         ))}
       </ul>
