@@ -5,10 +5,9 @@ import { CloseOutlined } from '@ant-design/icons'
 import { getTags, getArticles, getDrafts } from '../../redux/actions'
 import { db, _, auth } from '../../utils/cloudBase'
 import { visitorText, adminUid } from '../../utils/constants'
-import './index.css'
 
 const Tag = (props) => {
-  const tagColor = ['#a8edea', '#fed6e3', '#30cfd0', '#330867', 'd299c2', '#8ec5fc', '#f093fb', '#f5576c', '#fa709a', '#fee140']
+  const tagColor = ['#8ee5e0', '#e783a2', '#30cfd0', '#c29af4', '#ffe100', '#80aedc', '#f093fb', '#f5576c', '#fa709a', '#ff891b']
   const colorLen = tagColor.length
   const [tagEditVisible, setTagEditVisible] = useState(false)
   const [tagInput, setTagInput] = useState('')
@@ -195,13 +194,13 @@ const Tag = (props) => {
     clearAllState()
   }
   return (
-    <div className='tagBox'>
-      <div className='homeSingleBox'>标签</div>
-      <div className='classCreateBox'>
+    <div className='bg-white hover-shadow-black p-10 h-300 w-310 br-10'>
+      <div className='fs-20 u-select-no'>标签</div>
+      <div className='fs-16 my-10 center'>
         <input
           type='text'
           placeholder='请输入新的标签...'
-          className='classCreateInput'
+          className='flex-1 border px-10 h-36 hover-shadow-blue'
           onKeyUp={(e) => {
             if (e.keyCode === 13) addTag()
           }}
@@ -210,15 +209,15 @@ const Tag = (props) => {
             setTagInput(e.target.value)
           }}
         />
-        <div className='classCreateBtn' onClick={addTag}>
+        <div className='h-36 w-60 center bg-blue white hover-bg hover-shadow-blue' onClick={addTag}>
           新建
         </div>
       </div>
-      <div className='classesList tagsList'>
+      <div className='w-310 wrap'>
         <Modal title='修改标签' centered open={tagEditVisible} onOk={editTag} onCancel={tagEditCancel} width={400} okText='确认' cancelText='取消'>
           <input
             type='text'
-            className='editClassInput'
+            className='border px-10 fs-16 w-1p hover-shadow-blue'
             value={tagEditInput}
             onChange={(e) => setTagEditInput(e.target.value)}
             onKeyUp={(e) => {
@@ -227,17 +226,17 @@ const Tag = (props) => {
           />
         </Modal>
         {props.tags.map((item, index) => (
-          <span
-            className='theTag'
+          <div
+            className='center h-36 mr-6 p-10 hover-shadow-black scale-big black mb-10'
             style={{ backgroundColor: tagColor[(index + 1) % colorLen] }}
             onDoubleClick={() => openEditModal(item._id, item.tag)}
             key={item._id}
           >
             {item.tag}
             <Popconfirm placement='top' title='确定要删除该标签吗？' onConfirm={() => deleteTag(item._id, item.tag)} okText='Yes' cancelText='No'>
-              <CloseOutlined className='deleteTagBtn' />
+              <CloseOutlined className='fs-14 ml-6' />
             </Popconfirm>
-          </span>
+          </div>
         ))}
       </div>
     </div>

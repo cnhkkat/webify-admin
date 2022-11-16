@@ -4,20 +4,17 @@ import Welcome from '../../components/Welcome'
 import Chart from '../../components/Chart'
 import Class from '../../components/Class'
 import Tag from '../../components/Tag'
-
-import './index.css'
-
 const Home = () => (
-  <div className='contain'>
+  <div className='ml-100'>
     <Welcome />
-    <div className='flexBox'>
+    <div className='justify-around'>
       <Statistic type={'articles'} />
       <Statistic type={'drafts'} />
+      <Statistic type={'says'} />
       <Statistic type={'links'} />
       <Statistic type={'msgs'} />
-      <Statistic type={'says'} />
     </div>
-    <div className='flexBox'>
+    <div className='justify-around mt-10'>
       <Chart />
       <Class />
       <Tag />

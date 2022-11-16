@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
-import './index.css'
 import { NavLink } from 'react-router-dom'
 
 const Statistic = (props) => {
@@ -40,10 +39,10 @@ const Statistic = (props) => {
     }
   }, [props])
   return (
-    <div className='statisticItem'>
+    <div className='hover-shadow-black f-basis-160 justify-around br-10 bg-white p-10'>
       <NavLink to={`/${props.type}`}>
-        <div className='type'>{type}数</div>
-        <div className='number'>{num}</div>
+        <div className='text-center fs-20 black'>{type}数</div>
+        <div className='blue fs-80'>{num}</div>
       </NavLink>
     </div>
   )

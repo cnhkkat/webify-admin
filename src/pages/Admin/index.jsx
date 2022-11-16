@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Nav from '../../components/Nav'
-import Content from '../../components/Content'
+
 import { connect } from 'react-redux'
 import { db } from '../../utils/cloudBase'
 // import moment from 'moment'
@@ -16,7 +16,7 @@ const Admin = (props) => {
       .then((res) => {
         switch (dbName) {
           case 'articles': {
-            console.log(res.data)
+            // console.log(res.data)
             props.getArticles(res.data)
             break
           }
@@ -32,10 +32,10 @@ const Admin = (props) => {
             props.getTags(res.data)
             break
           }
-          case 'about': {
-            props.getAbout(res.data)
-            break
-          }
+          // case 'about': {
+          //   props.getAbout(res.data)
+          //   break
+          // }
           case 'links': {
             props.getLinks(res.data)
             break
@@ -69,7 +69,7 @@ const Admin = (props) => {
       getDataFromDB('drafts')
       getDataFromDB('classes')
       getDataFromDB('tags')
-      getDataFromDB('about')
+      // getDataFromDB('about')
       getDataFromDB('links')
       getDataFromDB('logs')
       getDataFromDB('says')
@@ -81,24 +81,18 @@ const Admin = (props) => {
     }
   }, [isMounted])
 
-  return (
-    <div className='AdminBox'>
-      <Nav />
-      {/* <Content /> */}
-    </div>
-  )
+  return <Nav />
 }
 
 export default connect(() => ({}), {
   getArticles,
   getClasses,
   getTags,
-  getArticles,
   getDrafts,
   getSays,
   getLinks,
   getShows,
-  getAbout,
+  // getAbout,
   getLogs,
   getMsgs
 })(Admin)

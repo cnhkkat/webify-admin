@@ -5,7 +5,6 @@ import { login } from '../../../redux/actions'
 import { notification } from 'antd'
 import { CloseOutlined, CheckOutlined } from '@ant-design/icons'
 import { avatarUrl, visitorEmail, visitorPwd } from '../../../utils/constants'
-import './index.css'
 
 const LoginBox = (props) => {
   const [email, setEmail] = useState('')
@@ -42,21 +41,23 @@ const LoginBox = (props) => {
   }
 
   return (
-    <div className='loginBox'>
-      <img src={avatarUrl} alt='avatar' className='avatar' />
-      <div className='EmailBox'>
-        <div className='Email'>邮箱</div>
-        <input type='text' className='inputEmail' value={email} onChange={(e) => setEmail(e.target.value)} />
+    <div className='w-400 h-300 bg-orange shadow m-auto px-10 pt-90 relative br-20'>
+      <img src={avatarUrl} alt='avatar' className='w-120 h-120 shadow position-center absolute br-50' />
+      <div className='hover-bg hover-shadow-blue flex'>
+        <div className='w-90 bg-blue  center fs-20 u-select-no'>邮箱</div>
+        <input type='text' className='px-10 b-no w-310' value={email} onChange={(e) => setEmail(e.target.value)} />
       </div>
-      <div className='pwdBox'>
-        <div className='pwd'>密码</div>
-        <input type='password' className='inputpwd' value={pwd} onChange={(e) => setPwd(e.target.value)} />
+      <div className='hover-bg hover-shadow-blue flex mt-10'>
+        <div className='w-90 bg-blue center fs-20 u-select-no'>密码</div>
+        <input type='password' className='px-10 b-no w-310' value={pwd} onChange={(e) => setPwd(e.target.value)} />
       </div>
-      <div className='loginBtn' onClick={() => onLogin(false)}>
-        管理员登录
-      </div>
-      <div className='visitorBtn' onClick={() => onLogin(true)}>
-        游客登录
+      <div className='justify-around mt-30'>
+        <div className='w-120 h-40 br-20 bg-blue center fs-20 hover-bg hover-shadow-blue u-select-no' onClick={() => onLogin(true)}>
+          游客登录
+        </div>
+        <div className='w-120 h-40 bg-blue br-20 center fs-20 hover-bg hover-shadow-blue u-select-no' onClick={() => onLogin(false)}>
+          管理员登录
+        </div>
       </div>
     </div>
   )

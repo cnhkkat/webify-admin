@@ -8,7 +8,9 @@ import says from './says'
 import links from './links'
 import classes from './classes'
 import tags from './tags'
-
+import logs from './logs'
+import shows from './shows'
+import about from './about'
 export default combineReducers({
   loginState,
   articles,
@@ -17,5 +19,8 @@ export default combineReducers({
   says,
   links,
   classes,
-  tags
+  tags,
+  logs,
+  shows,
+  about
 })

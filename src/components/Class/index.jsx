@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 import { getClasses, getArticles } from '../../redux/actions'
 import { db, auth } from '../../utils/cloudBase'
 import { visitorText, adminUid } from '../../utils/constants'
-import './index.css'
 
 const Class = (props) => {
   const [classEditVisible, setClassEditVisible] = useState(false)
@@ -170,37 +169,37 @@ const Class = (props) => {
     setClassEditVisible(true)
   }
   return (
-    <div className='ClassBox'>
-      <div className='homeSingleBox'>分类</div>
-      <div className='classCreateBox'>
+    <div className='w-310 h-300 bg-white hover-shadow-black br-10'>
+      <div className='fs-20 u-select-no pt-10 pl-10'>分类</div>
+      <div className='fs-16 m-10 center'>
         <input
           type='text'
           placeholder='请输入新的分类...'
-          className='classCreateInput'
+          className='flex-1 border px-10 h-36 hover-shadow-blue'
           value={classInput}
           onKeyUp={(e) => {
             if (e.keyCode === 13) addClass()
           }}
           onChange={(e) => setClassInput(e.target.value)}
         />
-        <div className='classCreateBtn' onClick={addClass}>
+        <div className='h-36 w-60 center bg-blue white hover-bg hover-shadow-blue' onClick={addClass}>
           新建
         </div>
       </div>
-      <div className='classesList'>
+      <div className='h-200 overflow scrollbar'>
         <Modal
           title='修改分类'
           centered
           open={classEditVisible}
           onOk={editClass}
           onCancel={classEditCancel}
-          width={400}
+          width={300}
           okText='确认'
           cancelText='取消'
         >
           <input
             type='text'
-            className='editClassInput'
+            className='border px-10 fs-16 w-1p hover-shadow-blue'
             value={classEditInput}
             onChange={(e) => setClassEditInput(e.target.value)}
             onKeyUp={(e) => {
@@ -213,10 +212,10 @@ const Class = (props) => {
           bordered={false}
           dataSource={props.classes}
           renderItem={(item) => (
-            <List.Item className='classesItem'>
-              <div className='articlesNum'>{item.count}</div>
-              <spa className='className'>《{item.class}》</spa>
-              <EditOutlined className='classesEdit' onClick={() => openEditModal(item._id, item.class)} />
+            <List.Item className='justify-between fs-16 u-select-no'>
+              <div className='white w-22 h-22 br-50 bg-blue center'>{item.count}</div>
+              <span className='f-basis-160'>《{item.class}》</span>
+              <EditOutlined className='hover-blue' onClick={() => openEditModal(item._id, item.class)} />
               <Popconfirm
                 placement='top'
                 title='确定要删除该分类吗？'
@@ -224,7 +223,7 @@ const Class = (props) => {
                 okText='Yes'
                 cancelText='No'
               >
-                <DeleteOutlined className='classesDelete' />
+                <DeleteOutlined className='hover-red' />
               </Popconfirm>
             </List.Item>
           )}

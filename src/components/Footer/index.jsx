@@ -1,7 +1,5 @@
-import './index.css'
-
 const Footer = () => (
-  <div className='FooterBox'>
+  <div className='center h-40'>
     <div>
       博客后台管理系统 ©2021 Created by
       <a href='/' target='_blank' rel='noreferrer'>

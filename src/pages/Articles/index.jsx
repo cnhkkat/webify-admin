@@ -7,8 +7,7 @@ import { db, _, auth } from '../../utils/cloudBase'
 import { isContained } from '../../utils/functions'
 import { getClasses, getArticles, getMsgs } from '../../redux/actions'
 import { visitorText, adminUid } from '../../utils/constants'
-import { useNavigate, useLocation } from 'react-router-dom'
-import './index.css'
+import { useNavigate } from 'react-router-dom'
 
 const { Option } = Select
 const Articles = ({ tags, classes, articles, getClasses, getArticles, getMsgs }) => {
@@ -263,11 +262,17 @@ const Articles = ({ tags, classes, articles, getClasses, getArticles, getMsgs })
 
   return (
     <>
-      <div className='searchBox'>
-        <div className='addArticleBtn' onClick={turnAddPage}>
+      <div className='ml-100 pt-20 mb-10 justify-around'>
+        <div className='h-40 w-90 br-20 fs-16 white center bg-blue hover-bg hover-shadow-blue u-select-no' onClick={turnAddPage}>
           写文章
         </div>
-        <input type='text' ref={searchWords} className='Search' placeholder='输入文章标题...' onChange={searchByWords} />
+        <input
+          type='text'
+          ref={searchWords}
+          className='bg-white b-no w-310 h-40 br-10 px-10 fs-16 hover-shadow-blue'
+          placeholder='输入文章标题...'
+          onChange={searchByWords}
+        />
 
         <Select
           showSearch
@@ -303,18 +308,18 @@ const Articles = ({ tags, classes, articles, getClasses, getArticles, getMsgs })
             <Option key={item.tag}>{item.tag}</Option>
           ))}
         </Select>
-        <div className='resetBtn' onClick={resetSearch}>
+        <div className='w-50 h-40 br-20 bg-blue center fs-18 white u-select-no' onClick={resetSearch}>
           <RedoOutlined />
         </div>
       </div>
       <Table
         // size='middle'
-        className='Table'
+        className='ml-100'
         bordered
         loading={tableLoading}
         pagination={{
           position: ['bottomCenter'],
-          defaultPageSize: 11,
+          defaultPageSize: 8,
           hideOnSinglePage: true,
           showTitle: false,
           size: ['small']

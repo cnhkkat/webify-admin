@@ -1,1 +1,414 @@
 @import '~antd/dist/antd.css';
+.hover-blue:hover {
+    color: #1890ff;
+}
+.hover-red:hover {
+    color: red;
+}
+.hover-bg:hover {
+    background-color: #40a9ff;
+}
+.hover-bg-white:hover {
+    background-color: #e7e7e7;
+}
+.hover-shadow-blue:hover {
+    box-shadow: 0 0 4px #1890ff;
+}
+.hover-shadow-black:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+
+.transition {
+    transition: all 0.2s;
+}
+.u-select-no {
+    user-select: none;
+}
+
+.shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+
+
+.f-basis-160 {
+    flex: 0 1 160px;
+}
+.flex {
+    display: flex;
+}
+.space-around {
+    justify-content: space-around;
+}
+.flex-1 {
+    flex: 1;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.justify-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.justify-between {
+    display: flex;
+   justify-content:space-between;
+   align-items: center;
+}
+
+
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
+
+.br-10 {
+    border-radius: 10px;
+}
+.br-12 {
+    border-radius: 12px;
+}
+.br-20 {
+    border-radius: 20px;
+}
+.br-50 {
+    border-radius: 50%;
+}
+
+.blue {
+    color: #1890ff;
+}
+.white {
+    color: #fff;
+}
+.black {
+    color: #000;
+}
+.orange {
+    color: #faad14;
+}
+
+.bg-blue {
+    background-color: #1890ff;
+}
+.bg-light-blue {
+    background-color: #b9dfff;
+}
+.bg-lighter-blue {
+    background-color: #d4f7ff;
+}
+.bg-white {
+    background: #fff;
+}
+.bg-orange {
+    background-color: #faad14;
+}
+
+.fs-14 {
+    font-style: 14px;
+}
+.fs-16 {
+    font-size: 16px;
+}
+.fs-18 {
+    font-style: 18px;
+}
+.fs-20 {
+    font-size: 20px;
+}
+
+.fs-36 {
+    font-size: 36px;
+}
+
+.fs-80 {
+    font-size: 80px;
+}
+
+
+.bold {
+    font-weight: 700;
+}
+
+.m-auto {
+   margin: 0 auto;
+}
+
+
+.m-10 {
+    margin: 10px;
+}
+.my-10 {
+    margin: 10px 0;
+}
+.mx-10 {
+    margin: 0 10px;
+}
+.mr-10 {
+    margin-right: 10px;
+}
+.mr-50 {
+    margin-right: 50px;
+}
+.m-20{
+    margin: 20px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.ml-30 {
+    margin-left: 30px;
+}
+.ml-100 {
+    margin-left: 105px;
+}
+.ml-6 {
+    margin-left: 6px;
+}
+.mr-6 {
+    margin-right: 6px;
+}
+
+
+.p-0 {
+    padding: 0;
+}
+.p-10 {
+    padding: 10px;
+}
+.p-30 {
+    padding: 30px;
+}
+.py-10 {
+    padding: 10px 0;
+}
+.px-10 {
+    padding: 0 10px;
+}
+.pt-10 {
+    padding-top: 10px;
+}
+.pt-20 {
+    padding-top: 20px;
+}
+.pt-90 {
+    padding-top: 90px;
+}
+.pb-10 {
+    padding-bottom: 10px;
+}
+.pl-10 {
+    padding-left: 10px;
+}
+.avatar-110 {
+    width: 110px;
+    height: 110px;
+}
+.min-h-300 {
+    min-height: 300px;
+}
+.h-36 {
+    height: 36px;
+}
+.h-40 {
+    height: 40px;
+}
+.h-58 {
+    height: 58px;
+}
+.h-120 {
+    height: 120px;
+}
+.h-150{
+    height: 150px;
+}
+.h-200 {
+    height: 200px;
+}
+.h-300 {
+    height: 300px;
+}
+.h-22 {
+    height: 22px;
+}
+.h-1p{
+    height: 100%;
+}
+
+.w-1p {
+    width: 100%;
+}
+.w-22 {
+    width: 22px;
+}
+.w-50 {
+    width: 50px;
+}
+.w-50p {
+    width: 50%;
+}
+.w-60 {
+    width: 60px;
+}
+.w-90 {
+    width: 90px;
+}
+.w-120 {
+    width: 120px;
+}
+.w-310 {
+    width: 310px;
+}
+.w-300 {
+    width: 300px;
+}
+.w-400 {
+    width: 400px;
+}
+
+
+.break-word {
+    word-break: break-word;
+}
+.break-all {
+    word-break: break-all;
+}
+.b-no {
+    border: none;
+    outline-style: none;
+    resize: none;
+}
+.overflow {
+    overflow: auto;
+}
+.overflow-y {
+    overflow-y: hidden;
+}
+.border {
+    border: 1px solid #ccc;
+}
+
+.ant-table-thead .ant-table-cell {
+    text-align: center;
+    font-size: 16px;
+}
+
+.ant-table-tbody .ant-table-cell {
+    text-align: center;
+}
+
+/* 设置滚动条的样式 */
+.scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+/* 滚动槽 */
+.scrollbar::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
+
+}
+/* 滚动条滑块 */
+.scrollbar::-webkit-scrollbar-thumb {
+    background: #1890ff;
+    border-radius: 10px;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.b-30 {
+    bottom: 30px;
+}
+
+.scale-big:hover {
+    transform: scale(1.1);
+}
+
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.position-center {
+   top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.markdownStyle table {
+    margin: 20px auto;
+    border: 1px solid #000;
+    border-spacing: 0; /*去掉单元格间隙*/
+    text-align: center;
+}
+.markdownStyle table th,
+.markdownStyle table td {
+    padding: 6px 14px;
+    border: 1px solid #000;
+}
+/* h1 h2 h3 h4 h5 h6 p */
+/* .markdownStyle h1,
+.markdownStyle h2,
+.markdownStyle h3,
+.markdownStyle h4,
+.markdownStyle h5,
+.markdownStyle h6,
+.markdownStyle p {
+    margin: 0.3em;
+} */
+/* 行内代码 */
+.markdownStyle code {
+    color: red;
+    background-color: #eeeeee;
+    padding: 0 4px;
+}
+
+/* 图片 */
+.markdownStyle p img {
+    display: block;
+    max-width: 100%;
+    margin: 14px auto;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.markdownStyle blockquote {
+    background-color: #dfdfdf;
+    padding: 14px 40px;
+    font-size: 18px;
+    border-radius: 20px;
+    border: 2px rgb(105, 105, 105) dashed;
+}
+.markdownStyle strong {
+    text-decoration: underline;
+}
+
+.markdownStyle blockquote p {
+    margin: 0;
+}

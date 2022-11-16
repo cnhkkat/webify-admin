@@ -2,9 +2,8 @@ import { useState, useEffect } from 'react'
 import moment from 'moment'
 import { avatarUrl, adminUid, visitorAvatar } from '../../utils/constants'
 import { auth } from '../../utils/cloudBase'
-import './index.css'
 
-const Welcome = () => {
+const Welcome = (props) => {
   const [name, setName] = useState('游客')
   const [avatar, setAvatar] = useState(visitorAvatar)
   const [timeText, setTimeText] = useState('')
@@ -35,10 +34,11 @@ const Welcome = () => {
         : '夜深了,早点休息哦'
     setTimeText(timeText)
   }, [])
+
   return (
-    <div className='WelcomeBox'>
-      <img src={avatar} alt='头像' className='home-avatar' />
-      <span className='welcomeTitle'>
+    <div className='center'>
+      <img src={avatar} alt='头像' className='avatar-110 m-20 br-50' />
+      <span className='fs-36 flex-1'>
         {timeText} ~ <span>{name}</span>
       </span>
     </div>

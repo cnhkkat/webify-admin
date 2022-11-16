@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { Pie } from '@ant-design/charts'
-import './index.css'
 
 const Chart = (props) => {
   const [classData, setClassData] = useState([])
@@ -56,8 +55,8 @@ const Chart = (props) => {
     }
   }, [props.classes, props.articles])
   return (
-    <div className='ChartBox'>
-      <span className='chartTitle'>文章分类</span>
+    <div className='h-300 w-310 bg-white pt-10 pl-10 hover-shadow-black br-10'>
+      <span className='fs-20 black'>文章分类</span>
       <Pie {...pieConfig} />
     </div>
   )

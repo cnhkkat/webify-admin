@@ -11,8 +11,7 @@ import { getClasses, getArticles, getDrafts } from '../../redux/actions'
 import hljs from 'highlight.js'
 import { useNavigate, useLocation } from 'react-router-dom'
 // 代码高亮的主题
-import './github-dark.css'
-import './index.css'
+import '../../github-dark.css'
 
 const { Option } = Select
 const AddArticle = (props) => {
@@ -334,11 +333,11 @@ const AddArticle = (props) => {
   // ——————————————————————两个按钮end——————————————————————
 
   return (
-    <>
+    <div className='ml-100 mt-10'>
       {/* 标题输入区 */}
-      <div className='titleBox'>
+      <div className='h-58 justify-around'>
         <input
-          className='inputTitle'
+          className='w-400 h-40 px-10 bg-white b-no br-10 hover-shadow-blue'
           placeholder='请输入文章标题...'
           value={title}
           onChange={(e) => {
@@ -346,18 +345,25 @@ const AddArticle = (props) => {
           }}
         />
         <input
-          className='inputEng'
+          className='w-400 h-40 px-10 bg-white b-no br-10 hover-shadow-blue'
           placeholder='请输入英文标题...'
           value={titleEng}
           onChange={(e) => {
             setTitleEng(e.target.value)
           }}
         />
-        <Popconfirm className='draftBtn' placement='bottomRight' title='确定保存为草稿吗？' onConfirm={turnDraft} okText='Yes' cancelText='No'>
+        <Popconfirm
+          className='h-40 w-120 br-10 bg-blue center fs-16 white hover-bg hover-shadow-blue'
+          placement='bottomRight'
+          title='确定保存为草稿吗？'
+          onConfirm={turnDraft}
+          okText='Yes'
+          cancelText='No'
+        >
           存为草稿
         </Popconfirm>
         <Popconfirm
-          className='pubBtn'
+          className='h-40 w-120 br-10 bg-blue center fs-16 white hover-bg hover-shadow-blue'
           placement='bottomRight'
           title={`确定${isEdit && !isDraft ? '更新' : '发布'}文章吗？`}
           onConfirm={turnArticle}
@@ -370,7 +376,7 @@ const AddArticle = (props) => {
       </div>
 
       {/* 标签、分类区 */}
-      <div className='tagClassBox'>
+      <div className='justify-around pb-10 bold fs-16'>
         {/* 分类 */}
         <div>
           文章分类：
@@ -398,10 +404,10 @@ const AddArticle = (props) => {
           </Select>
         </div>
         {/* 时间 */}
-        <div className='timeBox'>
+        <div>
           时间：
           <input
-            className='timeInput'
+            className='px-10 b-no h-36 br-10'
             type='text'
             value={date}
             onChange={(e) => {
@@ -411,9 +417,9 @@ const AddArticle = (props) => {
         </div>
       </div>
       {/* 内容编辑区 */}
-      <div className='editBox'>
+      <div className='flex space-around min-h-300'>
         <div
-          className='inputRegion'
+          className='w-50p bg-light-blue p-30 fs-18 break-word b-no overflow-y '
           onInput={(e) => {
             setContent(e.target.innerText)
           }}
@@ -424,13 +430,13 @@ const AddArticle = (props) => {
         </div>
 
         <div
-          className='showRegion markdownStyle'
+          className='w-50p bg-white p-30 fs-18 break-word markdownStyle'
           dangerouslySetInnerHTML={{
             __html: marked(content).replace(/<pre>/g, "<pre id='hljs'>")
           }}
         ></div>
       </div>
-    </>
+    </div>
   )
 }
 
