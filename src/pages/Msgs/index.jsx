@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { connect } from 'react-redux'
-import { Modal, notification, Table, Space, Button, Popconfirm, message, Popover } from 'antd'
-import { FormOutlined, MessageOutlined, DeleteOutlined } from '@ant-design/icons'
+import { notification, Table, Space, Button, Popconfirm, message } from 'antd'
+import { DeleteOutlined } from '@ant-design/icons'
 import moment from 'moment'
 
 import { db, auth } from '../../utils/cloudBase'
@@ -10,11 +10,6 @@ import { blogUrl, visitorText, adminUid } from '../../utils/constants'
 
 const Msgs = (props) => {
   const [tableLoading, setTableLoading] = useState(false)
-  const [addMsgVisible, setMsgVisible] = useState(false)
-  const [isEdit, setIsEdit] = useState(false)
-  const [id, setId] = useState('')
-  const [date, setDate] = useState('')
-  const [content, setContent] = useState('')
 
   const columns = [
     {

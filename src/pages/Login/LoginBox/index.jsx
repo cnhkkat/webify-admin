@@ -27,7 +27,6 @@ const LoginBox = (props) => {
   const onLogin = (isVisitor) => {
     const EMAIL = isVisitor ? visitorEmail : email
     const PWD = isVisitor ? visitorPwd : pwd
-
     auth
       .signInWithEmailAndPassword(EMAIL, PWD)
       .then(() => {
@@ -53,7 +52,7 @@ const LoginBox = (props) => {
       </div>
       <div className='justify-around mt-30'>
         <div className='w-120 h-40 br-20 bg-blue center fs-20 hover-bg hover-shadow-blue u-select-no' onClick={() => onLogin(true)}>
-          游客登录
+          游客
         </div>
         <div className='w-120 h-40 bg-blue br-20 center fs-20 hover-bg hover-shadow-blue u-select-no' onClick={() => onLogin(false)}>
           管理员登录

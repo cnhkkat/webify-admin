@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { db, auth } from '../../utils/cloudBase'
 import { notification, message } from 'antd'
-import { SkinOutlined, HomeOutlined } from '@ant-design/icons'
+import { SkinOutlined } from '@ant-design/icons'
 import { connect } from 'react-redux'
 import { getAbout } from '../../redux/actions'
 import { visitorText, adminUid } from '../../utils/constants'

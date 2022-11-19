@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { connect } from 'react-redux'
-import { Modal, notification, Table, Space, Button, Popconfirm, message, Popover } from 'antd'
+import { Modal, notification, Table, Space, Button, Popconfirm, message } from 'antd'
 import { FormOutlined, MessageOutlined, DeleteOutlined } from '@ant-design/icons'
 import moment from 'moment'
 

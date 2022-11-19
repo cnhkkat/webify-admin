@@ -4,7 +4,7 @@ import Nav from '../../components/Nav'
 import { connect } from 'react-redux'
 import { db } from '../../utils/cloudBase'
 // import moment from 'moment'
-import { getArticles, getClasses, getTags, getDrafts, getSays, getLinks, getShows, getAbout, getLogs, getMsgs } from '../../redux/actions'
+import { getArticles, getClasses, getTags, getDrafts, getSays, getLinks, getShows, getLogs, getMsgs } from '../../redux/actions'
 
 const Admin = (props) => {
   const [isMounted, setIsMounted] = useState(true)
@@ -16,7 +16,6 @@ const Admin = (props) => {
       .then((res) => {
         switch (dbName) {
           case 'articles': {
-            // console.log(res.data)
             props.getArticles(res.data)
             break
           }
@@ -32,10 +31,6 @@ const Admin = (props) => {
             props.getTags(res.data)
             break
           }
-          // case 'about': {
-          //   props.getAbout(res.data)
-          //   break
-          // }
           case 'links': {
             props.getLinks(res.data)
             break
@@ -69,7 +64,6 @@ const Admin = (props) => {
       getDataFromDB('drafts')
       getDataFromDB('classes')
       getDataFromDB('tags')
-      // getDataFromDB('about')
       getDataFromDB('links')
       getDataFromDB('logs')
       getDataFromDB('says')
@@ -92,7 +86,6 @@ export default connect(() => ({}), {
   getSays,
   getLinks,
   getShows,
-  // getAbout,
   getLogs,
   getMsgs
 })(Admin)

@@ -3,8 +3,8 @@ export const blogUrl = 'https://my-webify-app-6gb155vqabd4c410-1313448776.tcloud
 export const avatarUrl = 'https://cdn.staticaly.com/gh/cnhkkat/images-store@master/jgy.webp'
 
 // 游客帐号信息
-export const visitorEmail = '1071541105@qq.com'
-export const visitorPwd = 'aa098765'
+export const visitorEmail = 'rashu99@163.com'
+export const visitorPwd = 'Wtt1071541105'
 
 // 游客修改失败后的提示语句
 export const visitorText = '游客不能修改哦'

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Modal, Table, message, notification, Popconfirm, Space, Button } from 'antd'
-import { PictureOutlined, FormOutlined, DeleteOutlined, EditOutlined } from '@ant-design/icons'
+import { PictureOutlined, DeleteOutlined, EditOutlined } from '@ant-design/icons'
 import { connect } from 'react-redux'
 import { getShows } from '../../redux/actions'
 import { db, auth } from '../../utils/cloudBase'
