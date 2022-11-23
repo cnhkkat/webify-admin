@@ -140,8 +140,8 @@ const AddArticle = (props) => {
         content,
         tags: selectTags,
         classes: selectClasses,
-        date: new Date(date).getTime()
-        // url: `https://lzxjack.top/post?title=${titleEng}`
+        date: new Date(date).getTime(),
+        url: `my-webify-app-6gb155vqabd4c410-1313448776.tcloudbaseapp.com/post?title=${titleEng}`
       })
       .then((res) => {
         // console.log(res);
@@ -188,8 +188,8 @@ const AddArticle = (props) => {
         content,
         tags: selectTags,
         classes: selectClasses,
-        date: new Date(date).getTime()
-        // url: `https://lzxjack.top/post?title=${titleEng}`
+        date: new Date(date).getTime(),
+        url: `my-webify-app-6gb155vqabd4c410-1313448776.tcloudbaseapp.com/post?title=${titleEng}`
       })
       .then((res) => {
         if (res.code && res.code === 'DATABASE_PERMISSION_DENIED') {
