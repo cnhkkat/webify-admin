@@ -1,5 +1,5 @@
 export const env = 'my-blog-react-8gmsxw51152f0a6b'
-export const blogUrl = 'https://my-webify-app-6gb155vqabd4c410-1313448776.tcloudbaseapp.com/'
+export const blogUrl = 'https://rashu99.top/'
 export const avatarUrl = 'https://cdn.staticaly.com/gh/cnhkkat/images-store@master/jgy.webp'
 
 // 游客帐号信息
